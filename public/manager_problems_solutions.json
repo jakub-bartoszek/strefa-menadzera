@@ -1,0 +1,86 @@
+{
+ "problems": [
+  {
+   "title": "Nadmiar informacji",
+   "description": "Menadżerowie często mają trudności z filtrowaniem i przetwarzaniem nadmiaru informacji, co może prowadzić do dezorganizacji i utraty efektywności."
+  },
+  {
+   "title": "Bezpieczeństwo danych",
+   "description": "Wraz z rozwojem technologii informacyjnych rośnie zagrożenie związane z bezpieczeństwem danych, co może prowadzić do wycieków informacji i naruszenia prywatności."
+  },
+  {
+   "title": "Brak umiejętności technologicznych",
+   "description": "Niektórzy menadżerowie mogą mieć trudności z dostosowaniem się do szybko zmieniającego się otoczenia technologicznego i brakiem umiejętności w obszarze technologii informacyjnych."
+  },
+  {
+   "title": "Komunikacja wirtualna",
+   "description": "Wirtualne środowisko pracy wymaga umiejętności efektywnej komunikacji online, co nie zawsze jest łatwe dla menadżerów."
+  },
+  {
+   "title": "Zarządzanie czasem online",
+   "description": "Ciągłe dostępność do internetu i narzędzi online może prowadzić do problemów z zarządzaniem czasem i zapewnieniem równowagi między życiem zawodowym a prywatnym."
+  },
+  {
+   "title": "Uzależnienie od technologii",
+   "description": "Niektórzy menadżerowie mogą stać się uzależnieni od technologii, co może prowadzić do problemów zdrowotnych i utraty równowagi."
+  },
+  {
+   "title": "Brak zaufania wobec danych online",
+   "description": "Menadżerowie mogą mieć obawy co do wiarygodności danych online, co może prowadzić do niepewności w podejmowaniu decyzji."
+  },
+  {
+   "title": "Konflikty międzypokoleniowe",
+   "description": "W środowisku pracy mogą wystąpić konflikty międzypokoleniowe związane z różnicami w podejściu do technologii i komunikacji online."
+  },
+  {
+   "title": "Odporność na zmiany",
+   "description": "Niektórzy menadżerowie mogą mieć trudności z adaptacją do zmian w społeczeństwie informacyjnym i nowych technologii."
+  },
+  {
+   "title": "Prywatność online",
+   "description": "Wraz z rozwojem społeczeństwa informacyjnego pojawiają się coraz większe obawy dotyczące prywatności online i nadużyć związanych z gromadzeniem danych."
+  }
+ ],
+ "solutions": [
+  {
+   "title": "Szkolenia z zarządzania informacjami",
+   "description": "Organizacja szkoleń i warsztatów dla menadżerów w zakresie efektywnego zarządzania informacjami i filtrowania treści."
+  },
+  {
+   "title": "Systemy zarządzania bezpieczeństwem danych",
+   "description": "Wdrożenie systemów zarządzania bezpieczeństwem danych w firmie oraz regularne szkolenia z zakresu ochrony danych."
+  },
+  {
+   "title": "Szkolenia technologiczne",
+   "description": "Organizacja szkoleń z zakresu umiejętności technologicznych, w tym obsługi narzędzi online i nowoczesnych technologii."
+  },
+  {
+   "title": "Szkolenia z komunikacji wirtualnej",
+   "description": "Przeprowadzenie szkoleń z efektywnej komunikacji online i zarządzania zespołem wirtualnym."
+  },
+  {
+   "title": "Programy zarządzania czasem online",
+   "description": "Wdrożenie programów zarządzania czasem online i promowanie zdrowych nawyków pracy."
+  },
+  {
+   "title": "Szkolenia z równowagi pracy i życia",
+   "description": "Organizacja szkoleń z równowagi między życiem zawodowym a prywatnym oraz promowanie zdrowego stylu życia."
+  },
+  {
+   "title": "Szkolenia z analizy danych online",
+   "description": "Przeprowadzenie szkoleń z umiejętności analizy i interpretacji danych online oraz promowanie zaufania do danych."
+  },
+  {
+   "title": "Programy integracji międzypokoleniowej",
+   "description": "Organizacja programów integracji międzypokoleniowej i promowanie zrozumienia różnic w podejściu do technologii."
+  },
+  {
+   "title": "Szkolenia z zarządzania zmianami",
+   "description": "Przeprowadzenie szkoleń z zarządzania zmianami i promowanie elastyczności oraz adaptacji."
+  },
+  {
+   "title": "Edukacja z zakresu prywatności online",
+   "description": "Organizacja szkoleń z ochrony prywatności online i promowanie świadomości zagrożeń związanych z gromadzeniem danych online."
+  }
+ ]
+}
