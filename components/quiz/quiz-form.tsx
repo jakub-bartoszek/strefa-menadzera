@@ -1,4 +1,5 @@
 import { FormEvent } from "react";
+import QuizItem from "./quiz-item";
 
 interface QuizFormProps {
  onSubmit: (e: FormEvent<HTMLFormElement>) => void;
@@ -15,29 +16,10 @@ const QuizForm = ({ onSubmit }: QuizFormProps) => {
    </h1>
    <section className="flex flex-col w-full mt-4 gap-y-4 flex-grow">
     {[1, 2, 3].map((questionNumber) => (
-     <fieldset
+     <QuizItem
       key={questionNumber}
-      className="flex flex-col gap-2 p-4"
-     >
-      <legend className="text-xl text-blue-950 font-semibold">
-       Przykładowe pytanie {questionNumber}
-      </legend>
-      {[1, 2, 3].map((answerNumber) => (
-       <div
-        key={answerNumber}
-        className="flex gap-x-2 items-center"
-       >
-        <input
-         type="radio"
-         id={`q${questionNumber}a${answerNumber}`}
-         name={`question${questionNumber}`}
-        />
-        <label htmlFor={`q${questionNumber}a${answerNumber}`}>
-         Odpowiedź {answerNumber}
-        </label>
-       </div>
-      ))}
-     </fieldset>
+      questionNumber={questionNumber}
+     />
     ))}
    </section>
    <button
