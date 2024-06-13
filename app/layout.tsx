@@ -25,7 +25,9 @@ export default function RootLayout({
     <header className="flex w-full fixed top-0">
      <Navigation />
     </header>
-    {children}
+    <main className="w-full max-w-[1400px] min-h-screen p-4">
+     {children}
+    </main>
     <Footer />
    </body>
   </html>

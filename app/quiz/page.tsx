@@ -11,7 +11,6 @@ const QuizPage = () => {
  };
 
  return (
-  <main className="w-full max-w-[1400px] min-h-screen p-4">
    <div className="flex items-center justify-center pt-14 h-full">
     <form
      className="w-full h-full flex flex-col items-center rounded-2xl border-2 border-blue-950 bg-blue-950/10 p-4"
@@ -55,7 +54,6 @@ const QuizPage = () => {
      </button>
     </form>
    </div>
-  </main>
  );
 };
 
