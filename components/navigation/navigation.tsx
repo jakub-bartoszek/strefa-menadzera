@@ -7,7 +7,6 @@ const Navigation = () => {
     <div className="font-extrabold text-2xl">
      <Link href="/">Strefa Menadżera</Link>
     </div>
-    <div>Nawigacja</div>
    </div>
   </nav>
  );
