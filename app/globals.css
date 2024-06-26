@@ -8,5 +8,4 @@ html, body, :root {
  display: flex;
  flex-direction: column;
  color-scheme: light;
- align-items: center;
 }
