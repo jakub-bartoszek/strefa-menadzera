@@ -2,14 +2,15 @@
 
 import QuizForm from "@/components/quiz/quiz-form";
 import { useRouter } from "next/navigation";
-import { FormEvent } from "react";
 
 const QuizPage = () => {
  const router = useRouter();
 
- const onSubmit = (e: FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
-  router.push("/results");
+ const onSubmit = (answers: boolean[]) => {
+  const query = answers
+   .map((answer, index) => `q${index + 1}=${answer}`)
+   .join("&");
+  router.push(`/results?${query}`);
  };
 
  return (
