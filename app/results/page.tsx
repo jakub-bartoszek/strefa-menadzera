@@ -23,7 +23,7 @@ const ResultsPage = () => {
    (_, index) => answers[index]
   );
   setResults(identifiedProblems);
- }, [searchParams]);
+ }, [searchParams, problems]);
 
  return (
   <div className="flex flex-col items-center pt-14 min-h-screen h-full gap-4">
