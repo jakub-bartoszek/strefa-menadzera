@@ -1,24 +1,55 @@
-import { FormEvent } from "react";
+import { FormEvent, useState } from "react";
 import QuizItem from "./quiz-item";
 
 interface QuizFormProps {
- onSubmit: (e: FormEvent<HTMLFormElement>) => void;
+ onSubmit: (answers: boolean[]) => void;
 }
 
 const QuizForm = ({ onSubmit }: QuizFormProps) => {
+ const [answers, setAnswers] = useState<boolean[]>(
+  Array(10).fill(false)
+ );
+
+ const handleAnswerChange = (
+  questionNumber: number,
+  answer: boolean
+ ) => {
+  const newAnswers = [...answers];
+  newAnswers[questionNumber - 1] = answer;
+  setAnswers(newAnswers);
+ };
+
+ const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  onSubmit(answers);
+ };
+
  return (
   <form
    className="w-full h-full flex flex-col items-center rounded-2xl border-2 border-blue-950 bg-blue-950/10 p-4"
-   onSubmit={onSubmit}
+   onSubmit={handleSubmit}
   >
    <h1 className="font-extrabold w-full text-center text-blue-950 text-3xl">
     Znajdźmy twój problem!
    </h1>
    <section className="flex flex-col w-full mt-4 gap-y-4 flex-grow">
-    {[1, 2, 3].map((questionNumber) => (
+    {[
+     "Nadmiaru informacji",
+     "Bezpieczeństwa danych",
+     "Braku umiejętności technologicznych",
+     "Komunikacji wirtualnej",
+     "Zarządzania czasem online",
+     "Uzależnienia od technologii",
+     "Braku zaufania wobec danych online",
+     "Konfliktów międzypokoleniowych",
+     "Odporności na zmiany",
+     "Prywatności online"
+    ].map((question, index) => (
      <QuizItem
-      key={questionNumber}
-      questionNumber={questionNumber}
+      key={index + 1}
+      questionNumber={index + 1}
+      question={question}
+      handleAnswerChange={handleAnswerChange}
      />
     ))}
    </section>

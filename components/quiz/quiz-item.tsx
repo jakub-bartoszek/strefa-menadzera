@@ -1,31 +1,40 @@
 interface QuizItemProps {
  questionNumber: number;
+ question: string;
+ handleAnswerChange: (
+  questionNumber: number,
+  answer: boolean
+ ) => void;
 }
 
-const QuizItem = ({ questionNumber }: QuizItemProps) => {
+const QuizItem = ({
+ questionNumber,
+ question,
+ handleAnswerChange
+}: QuizItemProps) => {
  return (
-  <fieldset
-   key={questionNumber}
-   className="flex flex-col gap-2 p-4"
-  >
+  <fieldset className="flex flex-col gap-2 p-4">
    <legend className="text-xl text-blue-950 font-semibold">
-    Przykładowe pytanie {questionNumber}
+    Czy Twój problem dotyczy: {question}?
    </legend>
-   {[1, 2, 3].map((answerNumber) => (
-    <div
-     key={answerNumber}
-     className="flex gap-x-2 items-center"
-    >
-     <input
-      type="radio"
-      id={`q${questionNumber}a${answerNumber}`}
-      name={`question${questionNumber}`}
-     />
-     <label htmlFor={`q${questionNumber}a${answerNumber}`}>
-      Odpowiedź {answerNumber}
-     </label>
-    </div>
-   ))}
+   <div className="flex gap-x-2 items-center">
+    <input
+     type="radio"
+     id={`q${questionNumber}a1`}
+     name={`question${questionNumber}`}
+     onChange={() => handleAnswerChange(questionNumber, true)}
+    />
+    <label htmlFor={`q${questionNumber}a1`}>Tak</label>
+   </div>
+   <div className="flex gap-x-2 items-center">
+    <input
+     type="radio"
+     id={`q${questionNumber}a2`}
+     name={`question${questionNumber}`}
+     onChange={() => handleAnswerChange(questionNumber, false)}
+    />
+    <label htmlFor={`q${questionNumber}a2`}>Nie</label>
+   </div>
   </fieldset>
  );
 };
