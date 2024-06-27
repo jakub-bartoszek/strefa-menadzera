@@ -6,7 +6,7 @@ const Footer = () => {
    <div className="w-full max-w-[1400px] p-4">
     <Image
      alt="Akademia Humanistyczno Ekonomiczna w Łodzi"
-     src="/images/ahe-logo.png"
+     src="./images/ahe-logo.png"
      width={249}
      height={96}
     />
