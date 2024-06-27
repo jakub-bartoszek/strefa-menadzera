@@ -1,3 +1,4 @@
+import { prefix } from "@/lib/prefix";
 import Image from "next/image";
 
 const Footer = () => {
@@ -6,7 +7,7 @@ const Footer = () => {
    <div className="w-full max-w-[1400px] p-4">
     <Image
      alt="Akademia Humanistyczno Ekonomiczna w Łodzi"
-     src="./images/ahe-logo.png"
+     src={`${prefix}/images/ahe-logo.png`}
      width={249}
      height={96}
     />
