@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import QuizItem from "./quiz-item";
 
 interface QuizFormProps {
@@ -9,6 +9,7 @@ const QuizForm = ({ onSubmit }: QuizFormProps) => {
  const [answers, setAnswers] = useState<boolean[]>(
   Array(10).fill(false)
  );
+ const [error, setError] = useState<boolean>(false);
 
  const handleAnswerChange = (
   questionNumber: number,
@@ -21,8 +22,19 @@ const QuizForm = ({ onSubmit }: QuizFormProps) => {
 
  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
   e.preventDefault();
-  onSubmit(answers);
+  if (answers.some((answer) => answer === true)) {
+   onSubmit(answers);
+   setError(false);
+  } else {
+   setError(true);
+  }
  };
+
+ useEffect(() => {
+  if (answers.some((answer) => answer === true)) {
+   setError(false);
+  }
+ }, [answers]);
 
  return (
   <form
@@ -53,6 +65,12 @@ const QuizForm = ({ onSubmit }: QuizFormProps) => {
      />
     ))}
    </section>
+   {error && (
+    <div className="text-red-500 font-bold w-full text-center mb-4">
+     Proszę zaznaczyć przynajmniej jedną odpowiedź na
+     &quot;Tak&ldquo;.
+    </div>
+   )}
    <button
     type="submit"
     className="mt-auto bg-blue-950 text-xl text-white rounded-full py-4 px-6 font-bold hover:scale-105 hover:bg-blue-900 transition"
