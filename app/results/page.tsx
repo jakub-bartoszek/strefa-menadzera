@@ -1,9 +1,16 @@
 "use client";
 
+import React, { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import ResultItem from "@/components/result/result-item";
-import problemsData from "@/data/manager_problems_solutions.json"; // Zakładam, że plik JSON jest w katalogu `data`
+import problemsData from "@/data/manager_problems_solutions.json";
+
+const Fallback = () => (
+ <div className="flex justify-center items-center h-screen">
+  <p>Loading...</p>
+ </div>
+);
 
 const ResultsPage = () => {
  const searchParams = useSearchParams();
@@ -39,4 +46,10 @@ const ResultsPage = () => {
  );
 };
 
-export default ResultsPage;
+const ResultsPageWithSuspense = () => (
+ <Suspense fallback={<Fallback />}>
+  <ResultsPage />
+ </Suspense>
+);
+
+export default ResultsPageWithSuspense;
