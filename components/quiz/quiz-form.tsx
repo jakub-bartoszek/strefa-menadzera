@@ -30,7 +30,7 @@ const QuizForm = ({ onSubmit }: QuizFormProps) => {
    onSubmit={handleSubmit}
   >
    <h1 className="font-extrabold w-full text-center text-blue-950 text-3xl">
-    Znajdźmy twój problem!
+    Czy Twój problem dotyczy:
    </h1>
    <section className="flex flex-col w-full mt-4 gap-y-4 flex-grow">
     {[

@@ -15,7 +15,7 @@ const QuizItem = ({
  return (
   <fieldset className="flex flex-col gap-2 p-4">
    <legend className="text-xl text-blue-950 font-semibold">
-    Czy Twój problem dotyczy: {question}?
+    {question}?
    </legend>
    <div className="flex gap-x-2 items-center">
     <input
