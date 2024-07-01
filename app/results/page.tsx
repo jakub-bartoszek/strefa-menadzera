@@ -1,12 +1,12 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import ResultItem from "@/components/result/result-item";
 import problemsData from "@/data/manager_problems_solutions.json";
 
-const ResultsPage = () => {
+const ResultsContent = () => {
  const searchParams = useSearchParams();
  const [results, setResults] = useState<
   { title: string; description: string }[]
@@ -30,7 +30,7 @@ const ResultsPage = () => {
  }, [searchParams, problems]);
 
  return (
-  <div className="flex flex-col items-center pt-14 min-h-screen h-full gap-4">
+  <div className="flex flex-col items-center min-h-screen h-full gap-4">
    <h2 className="text-blue-950 text-2xl font-bold">Rezultaty</h2>
    {results.length > 0 ? (
     results.map((result, index) => (
@@ -53,5 +53,11 @@ const ResultsPage = () => {
   </div>
  );
 };
+
+const ResultsPage = () => (
+ <Suspense fallback={<div>Loading...</div>}>
+  <ResultsContent />
+ </Suspense>
+);
 
 export default ResultsPage;
