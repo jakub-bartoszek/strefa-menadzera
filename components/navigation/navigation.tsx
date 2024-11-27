@@ -7,6 +7,14 @@ const Navigation = () => {
     <div className="font-extrabold text-2xl">
      <Link href="/">Strefa Menadżera</Link>
     </div>
+    <div className="flex gap-4">
+     <div className="font-bold py-1 px-2 rounded-full hover:bg-white hover:text-blue-950 transition">
+      <Link href="/ebook">Ebook</Link>
+     </div>
+     <div className="font-bold py-1 px-2 rounded-full hover:bg-white hover:text-blue-950 transition">
+      <Link href="/about">O Projekcie</Link>
+     </div>
+    </div>
    </div>
   </nav>
  );
